@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+#Connexion base de données
+connexion.js
