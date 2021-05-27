@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const SECRET = 'mykey'
+const fs = require('fs');
 
 /*
 Explication function:
@@ -48,10 +49,10 @@ module.exports = {
     verifier_exist_user: function(id_user, db){
         return new Promise(function(resolve){
             if(id_user){
-                db.query("SELECT id FROM user WHERE id = ?", [id_user] , function(err, resultat){
+                db.query("SELECT * FROM user WHERE id = ?", [id_user] , function(err, resultat){
                     if(err) throw("Erreur: ressource");
                     if(resultat.length == 1){
-                        resolve(true);
+                        resolve(resultat);
                     }
                     else{
                         resolve(false);
@@ -91,21 +92,35 @@ module.exports = {
             console.log('No files were uploaded')
             return false;
         }
-
         let uploadPath, current_time = new Date().getTime(), nom_img, fichier_name = fichier.name.split('.');
         let ext = fichier_name[fichier_name.length-1];
-        console.log("Fichier name : ");
-        console.log(fichier_name);
-        nom_img = "web_" + current_time+"."+ext;
+        nom_img = fichier_name[0]+"_" + current_time+"."+ext;
         uploadPath = chemin + nom_img;
         // Use the mv() method to place the file somewhere on your server
 
-        fichier.mv(uploadPath, function(err) {
+        fichier.mv("public/"+uploadPath, function(err) {
             if (err) return err;
             console.log('===> File uploaded :' + uploadPath);
         });
 
         return uploadPath;
+    },
+
+    deleteFile: function (path) {
+        if(path){
+            try {
+                fs.unlinkSync(path)
+                console.log("==> FILE REMOVED : "+ path);
+                //file removed
+            } catch(err) {
+                console.error(err)
+            }
+            return true;
+        }
+        else{
+            return "Aucun chemin";
+        }
+
     },
 
 }

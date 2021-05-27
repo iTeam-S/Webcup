@@ -8,4 +8,5 @@ module.exports = function(router) {
     //USER
     router.post("/api/v1/register", controller.register);
     router.post("/api/v1/login", controller.login);
+    router.post("/api/v1/update", controller.update);
 };

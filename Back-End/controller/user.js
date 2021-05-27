@@ -70,28 +70,23 @@ module.exports = {
     update: function(req, res){
         console.log("==> UPDATE USER");
         var id = req.body.id, nom = req.body.nom, prenom = req.body.prenom, pdp = "", video = "";
-        if(id){
-            if(req.files){
-                pdp = service.uploadfile("image/", req.files);
-            }       
-            connexion.then(function(db){
-                db.query("UPDATE user set nom = ?, prenom = ?, pdp = ?, video = ? WHERE id =?", [nom, prenom, pdp, video, id], function(err, resultat){
-                    if(err) return res.status(500).send({error: "Ressource"});
-                    res.send(resultat);
-                    /*
-                    if(update){
-                        res.send({success: true});
-                    }
-                    else{
-                        res.status(500).send({error: "Ressource"});
-                    }
-                    */
-                })
+        connexion.then(function(db){
+            service.verifier_exist_user(id, db).then(function(user){
+                if(user){
+                    if(req.files){
+                        if(user[0].pdp) service.deleteFile("public/"+user[0].pdp);                
+                        pdp = service.uploadfile("image/", req.files.pdp);
+                    }       
+                    db.query("UPDATE user set nom = ?, prenom = ?, pdp = ?, video = ? WHERE id =?", [nom, prenom, pdp, video, id], function(err){
+                        if(err) return res.status(500).send({error: "Ressource"});
+                        res.send({success:true});
+                    })
+                }
+                else{
+                    res.status(403).send({error:"Utilisateur introuvable"});
+                }
             })
-        }
-        else{
-            res.status(403).send({error:"Utilisateur introuvable"});
-        }
+        })
     }
 
 }
