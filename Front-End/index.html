@@ -30,14 +30,14 @@
           <div class="col-md-7">
             <h3>Login to <strong>Webcup</strong></h3>
             <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
-            <form action="#" method="post">
+            <form action="http://localhost:8000/api/v1/login" method="post">
               <div class="form-group first">
                 <label for="username">Email</label>
-                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username">
+                <input type="text" name="email" class="form-control" placeholder="your-email@gmail.com" id="username">
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="Your Password" id="password">
+                <input type="password" name="pass" class="form-control" placeholder="Your Password" id="password">
               </div>
               
               <div class="d-flex mb-5 align-items-center">
