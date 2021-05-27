@@ -1,4 +1,4 @@
-var controller = require("../controller/controller");
+var controller = require("../controller/user");
 var middleware = require("../middleware/auth");
 
 // On injecte le router d"express, nous en avons besoin pour définir les routes 

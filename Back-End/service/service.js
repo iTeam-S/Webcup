@@ -84,6 +84,28 @@ module.exports = {
                 }
             })
         })
-    }
+    },
+
+    uploadfile: function(chemin, fichier){
+        if (!fichier) {
+            console.log('No files were uploaded')
+            return false;
+        }
+
+        let uploadPath, current_time = new Date().getTime(), nom_img, fichier_name = fichier.name.split('.');
+        let ext = fichier_name[fichier_name.length-1];
+        console.log("Fichier name : ");
+        console.log(fichier_name);
+        nom_img = "web_" + current_time+"."+ext;
+        uploadPath = chemin + nom_img;
+        // Use the mv() method to place the file somewhere on your server
+
+        fichier.mv(uploadPath, function(err) {
+            if (err) return err;
+            console.log('===> File uploaded :' + uploadPath);
+        });
+
+        return uploadPath;
+    },
 
 }

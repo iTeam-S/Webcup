@@ -11,7 +11,6 @@ module.exports = {
     register: function(req, res){
         console.log("==> POST REGISTER");
         var donnee = req.body;
-        console.log(donnee);
         var email = donnee.email, mdp1 = donnee.pass, mdp2 = donnee.re_pass;
         connexion.then(function(db){
             service.inscrire(email, mdp1, mdp2, db).then(function(verification){
@@ -42,7 +41,6 @@ module.exports = {
     login: function(req, res){
         console.log("==> POST LOGIN");
         var email = req.body.email, mdp = req.body.pass;
-        console.log(email, mdp);
         if(email){
             connexion.then(function(db){
                 service.return_user_email(email, db).then(function(resultat){
@@ -68,5 +66,32 @@ module.exports = {
             res.send("Aucun adresse email");
         }
     },
+
+    update: function(req, res){
+        console.log("==> UPDATE USER");
+        var id = req.body.id, nom = req.body.nom, prenom = req.body.prenom, pdp = "", video = "";
+        if(id){
+            if(req.files){
+                pdp = service.uploadfile("image/", req.files);
+            }       
+            connexion.then(function(db){
+                db.query("UPDATE user set nom = ?, prenom = ?, pdp = ?, video = ? WHERE id =?", [nom, prenom, pdp, video, id], function(err, resultat){
+                    if(err) return res.status(500).send({error: "Ressource"});
+                    res.send(resultat);
+                    /*
+                    if(update){
+                        res.send({success: true});
+                    }
+                    else{
+                        res.status(500).send({error: "Ressource"});
+                    }
+                    */
+                })
+            })
+        }
+        else{
+            res.status(403).send({error:"Utilisateur introuvable"});
+        }
+    }
 
 }

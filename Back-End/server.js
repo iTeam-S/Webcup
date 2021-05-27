@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 8000
+const port = 8082
 const bodyParser = require('body-parser')
 const fileUpload = require('express-fileupload')
 
@@ -17,6 +17,7 @@ require('./router/route')(router);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(bodyParser.json())
 app.use('/', router);
 
 app.listen(port ,() => {
