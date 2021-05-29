@@ -56,23 +56,6 @@
           <li><a href="#about">A propos</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Equipe</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
           <li><a href="#contact">Contact</a></li>
 
         </ul>
@@ -80,7 +63,7 @@
 
       <div>
         <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
-        <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
+        <a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
       </div>
     </div>
   </header><!-- End Header -->
@@ -339,7 +322,7 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Check our Services</p>
+          <p>Nos services</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="200">
@@ -575,17 +558,17 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Liens</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#index.html">Accueil</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">A propos</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#index.html">Accueil</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#about">A propos</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Services</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Nos Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="##services">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Web Development</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Web Design</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Web Development</a></li>
             </ul>
           </div>
 
@@ -624,25 +607,25 @@
       <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content rounded-0">
-            <div class="modal-body py-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
               <div class="d-flex main-content">
-                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin.png');">
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/logbg.jpg');">
                 </div>
                 <div class="content-text p-4">
-                  <h3>Se connecter</h3>
+                  <h3 class="logtext">S'identifier</h3>
                   <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
                   <form action="#">
                     <div class="form-group">
-                      <label for="email">Adresse email</label>
+                      <label for="email" class="logtext" style="font-size: 13px;">Adresse email</label>
                       <input type="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                      <label for="password">Mot de passe</label>
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
                       <input type="password" class="form-control" id="password">
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
                     <div class="form-group">
-                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block logbtn">
                     </div>
                     <div class="form-group ">
                       <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
@@ -650,26 +633,6 @@
                   </form>
                 </div>
               </div>
-              <div class="content-text p-4">
-                <h3>Se connecter</h3>
-                <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
-                <form >
-                  <div class="form-group">
-                    <label for="emails">Adresse email</label>
-                    <input type="email" class="form-control" id="emails">
-                  </div>
-                  <div class="form-group">
-                    <label for="passs">Mot de passe</label>
-                    <input type="password" class="form-control" id="passs">
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Se connecter" class="btn btn-primary btn-block" id="submits">
-                  </div>
-                  <div class="form-group ">
-                    <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
-                  </div>
-                </form>
-            </div>
           </div>
         </div>
       </div><!-- End Modal  Login-->
@@ -678,45 +641,45 @@
       <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content rounded-0">
-            <div class="modal-body py-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
               <div class="d-flex main-content">
-                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin.png');">
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/logbg.jpg');">
                 </div>
                 <div class="content-text p-4">
-                  <h3>Enregistrement</h3>
+                  <h3 class="logtext">S'enregistrer</h3>
                   <p>Veuillez remplir le formulaire pour créer un compte</p>
                   <form action="#">
                     <div class="form-group">
-                      <label for="name">Nom *</label>
+                      <label for="name" class="logtext" style="font-size: 13px;">Nom *</label>
                       <input type="text" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                      <label for="prename">Prénom *</label>
+                      <label for="prename" class="logtext" style="font-size: 13px;">Prénoms*</label>
                       <input type="text" class="form-control" id="prename">
                     </div>
                     <div class="form-group">
-                      <label for="adresse">Adresse *</label>
+                      <label for="adresse" class="logtext" style="font-size: 13px;">Adresse*</label>
                       <input type="text" class="form-control" id="adresse">
                     </div>
                     <div class="form-group">
-                      <label for="adresse">Ville *</label>
+                      <label for="adresse" class="logtext" style="font-size: 13px;">Ville*</label>
                       <input type="text" class="form-control" id="adresse">
                     </div>
                     <div class="form-group">
-                      <label for="email">Adresse email *</label>
+                      <label for="email" class="logtext" style="font-size: 13px;">Email*</label>
                       <input type="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                      <label for="password">Mot de passe *</label>
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe *</label>
                       <input type="password" class="form-control" id="password">
                     </div>
                     <div class="form-group">
-                      <label for="confirmpass">Confirmer votre mot de passe *</label>
+                      <label for="confirmpass" class="logtext" style="font-size: 13px;">Confirmer votre mot de passe *</label>
                       <input type="text" class="form-control" id="confirmpass">
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
                     <div class="form-group">
-                      <input type="submit" value="Créer votre compte" class="btn btn-primary btn-block">
+                      <input type="submit" value="S'enregistrer" class="btn btn-primary btn-block">
                     </div>
                   </form>
                 </div>
