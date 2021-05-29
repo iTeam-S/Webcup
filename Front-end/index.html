@@ -79,8 +79,10 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#exampleModalCenter">Se connecter</a>
-
+      <div>
+        <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
+        <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
+      </div>
     </div>
   </header><!-- End Header -->
 
@@ -617,21 +619,21 @@
               <div class="info-box">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Ambatoroka, Antananarivo 101, Madagascar</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>info@example.com<br>contact@example.com</p>
+                <p>arleme.dev7@gmail.com<br>arleme.dev7@gmail.com</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info-box mt-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                <p>+261 34 449 33<br>+261 34 449 33</p>
               </div>
             </div>
           </div>
@@ -684,10 +686,10 @@
             <div class="footer-info">
               <h3>Dewi</h3>
               <p>
-                A108 Adam Street <br>
+                Ambatoroka, Antananarivo <br>
                 NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong>Phone:</strong> +261 34 91 449 33<br>
+                <strong>Email:</strong> arleme.dev7@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -752,38 +754,95 @@
   <div id="preloader"></div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content rounded-0">
-          <div class="modal-body py-0">
-            <div class="d-flex main-content">
-              <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin.png');">
-              </div>
-              <div class="content-text p-4">
-                <h3>Se connecter</h3>
-                <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
-                <form action="#">
-                  <div class="form-group">
-                    <label for="email">Adresse email</label>
-                    <input type="email" class="form-control" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="name">Mot de passe</label>
-                    <input type="password" class="form-control" id="name">
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
-                  </div>
-                  <div class="form-group ">
-                    <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
-                  </div>
-                </form>
+      <!-- Modal  Login-->
+      <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0">
+              <div class="d-flex main-content">
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin.png');">
+                </div>
+                <div class="content-text p-4">
+                  <h3>Se connecter</h3>
+                  <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="email">Adresse email</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Mot de passe</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
+                    <div class="form-group">
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
+                    </div>
+                    <div class="form-group ">
+                      <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div><!-- End Modal  Login-->
+
+      <!-- Modal  Register-->
+      <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0">
+              <div class="d-flex main-content">
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin.png');">
+                </div>
+                <div class="content-text p-4">
+                  <h3>Enregistrement</h3>
+                  <p>Veuillez remplir le formulaire pour créer un compte</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="name">Nom *</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="prename">Prénom *</label>
+                      <input type="text" class="form-control" id="prename">
+                    </div>
+                    <div class="form-group">
+                      <label for="adresse">Adresse *</label>
+                      <input type="text" class="form-control" id="adresse">
+                    </div>
+                    <div class="form-group">
+                      <label for="adresse">Ville *</label>
+                      <input type="text" class="form-control" id="adresse">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Adresse email *</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Mot de passe *</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="form-group">
+                      <label for="confirmpass">Confirmer votre mot de passe *</label>
+                      <input type="text" class="form-control" id="confirmpass">
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
+                    <div class="form-group">
+                      <input type="submit" value="Créer votre compte" class="btn btn-primary btn-block">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Modal  Login-->
+
+  <!-- Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
