@@ -856,17 +856,17 @@ section {
   text-align: center;
 }
 
+.clients img:hover {
+  filter: grayscale(100);
+  transform: scale(1.15);
+}
+
 .clients img {
   max-width: 45%;
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
-  filter: grayscale(100);
-}
-
-.clients img:hover {
   filter: none;
-  transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
