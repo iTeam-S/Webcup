@@ -24,6 +24,7 @@ resolve(resultat) ou resolve("Vérifier votre adresse email");
 module.exports = {
     inscrire: function(email, mdp1, mdp2, db){
         return new Promise(function(resolve){
+            console.log(mdp1 , mdp2);
             if(email){
                 db.query("SELECT email FROM user where email = ?", [email], function(err, resultats){
                     if(err) throw("Erreur: ressource");
@@ -120,7 +121,20 @@ module.exports = {
         else{
             return "Aucun chemin";
         }
-
     },
+
+    mail_utiliser_autre_user: function(email, id, db){
+        return new Promise(function(resolve){
+            db.query("SELECT email FROM user where email = ? and id <> ?", [email, id], function(err, resultat){
+                if(err) throw("Erreur: ressource");
+                if(resultat.length == 1){
+                    resolve("Adresse email déjà utilisé");
+                }
+                else{
+                    resolve(false);
+                }
+            })
+        })
+    }
 
 }
