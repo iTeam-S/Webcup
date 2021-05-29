@@ -32,7 +32,7 @@ module.exports = {
                                 }
                                 else{
                                     const token = service.generer_token(resultat[0].id, email);
-                                    res.send({id: resultat[0].id, token: token});
+                                    res.send({id: resultat[0].id, token: token, nom: resultat[0].nom, prenom: resultat[0].prenom});
                                 }
                             })
                         })
@@ -56,7 +56,7 @@ module.exports = {
                             if(err) throw(err);
                             if(result === true){
                                 const token = service.generer_token(resultat[0].id, email);
-                                res.send({id: resultat[0].id, token: token});
+                                res.send({id: resultat[0].id, token: token, nom: resultat[0].nom, prenom: resultat[0].prenom});
                             }
                             else{
                                 res.status(403).send({error:"Vérifier votre mot de passe"});
