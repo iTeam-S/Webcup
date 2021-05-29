@@ -1726,6 +1726,13 @@ section {
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
   max-width: 160px;
   margin-left: 24%;
+  cursor: pointer;
+}
+
+.estim{
+  margin-left: 28%;
+  font-family: "Raleway";
+  font-size: 13px;
 }
 
 
