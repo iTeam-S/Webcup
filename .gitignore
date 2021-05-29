@@ -105,3 +105,6 @@ dist
 
 #Connexion base de données
 connexion.js
+
+#environnement python
+env/

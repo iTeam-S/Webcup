@@ -15,12 +15,16 @@ $("#submits").click(function(e){
                     pass:  $("#passs").val(),
                 }),
                 success: function (result) {
-                    console.log(result);
-                    alert("nety");
+                    $.session.set('token', result.token);
+                    $.session.set('id', result.id);
+
+                    var session = $.session.get('token');
+                    var id = $.session.get('id');
+                    console.log(session);
                 },
                 error: function (xhr, status, err) {
                     console.error(xhr, status, err);
-                    alert("tsy nety");
+                    $("#g-recaptcha-error").text("Vérifier votre addresse email.")
                 }
             });
     }
