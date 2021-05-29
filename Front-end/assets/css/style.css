@@ -292,6 +292,69 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #fff;
 }
 
+.seconn{
+  margin-left: 25px;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border-color: #ff4a17;
+  background: #fd3800;
+}
+
+.seconn:hover{
+  margin-left: 25px;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  background-color: none;
+}
+
+.logbtn{
+  background: #fd3800 !important;
+  border: 0px solid !important;
+  font-size: 13px !important;
+}
+
+.logtext{
+  font-family: "Raleway";
+}
+
+.form-control{
+  border-bottom: 1.5px solid #b8b8b8 !important ;
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-radius: 0px !important;
+  transition-duration: 0.4s;
+  font-size: 13px !important;
+  font-family: "Raleway";
+}
+.form-control:focus{
+  border-color: #ff4a17 !important;
+  border-bottom: 1.5px solid #ff4a17 !important ;
+  border-top: 0px !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-radius: 0px !important;
+  transition-duration: 0.4s;
+  background-color: #fff !important;
+}
+
+.g-recaptcha{
+  font-size: 13px !important;
+  font-family: "Raleway";
+}
+
 .get-started-btn:hover {
   background: #fd3800;
   color: #fff;
@@ -856,17 +919,17 @@ section {
   text-align: center;
 }
 
+.clients img:hover {
+  filter: grayscale(100);
+  transform: scale(1.15);
+}
+
 .clients img {
   max-width: 45%;
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
-  filter: grayscale(100);
-}
-
-.clients img:hover {
   filter: none;
-  transform: scale(1.15);
 }
 
 @media (max-width: 768px) {
