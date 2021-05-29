@@ -135,6 +135,18 @@ module.exports = {
                 }
             })
         })
+    },
+
+    read_file: function(chemin){
+        return new Promise(function(resolve){
+            fs.readFile('Mongodb', 'utf8', function (err,data) {
+                if (err) {
+                  throw(err);
+                }
+                resolve(data);
+            });
+        })
+
     }
 
 }
