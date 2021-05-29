@@ -33,6 +33,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/csss/style.css">
 
+  <!-- Mapfile -->
+   <link rel="stylesheet" href="assets/csss/owl.theme.default.min.css">
+
   <!-- =======================================================
   * Template Name: Dewi - v2.2.1
   * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
@@ -47,7 +50,7 @@
   <header id="header" class="fixed-top ">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">I-coin</a></h1>
+      <h1 class="logo"><a href="index.html">iCoin-$</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -80,7 +83,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#exampleModalCenter">Se connecter</a>
 
     </div>
   </header><!-- End Header -->
@@ -835,6 +838,42 @@
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
   <div id="preloader"></div>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content rounded-0">
+          <div class="modal-body py-0">
+            <div class="d-flex main-content">
+              <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/madacoin1.png');">
+              </div>
+              <div class="content-text p-4">
+                <h3>Se connecter</h3>
+                <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
+                <form action="#">
+                  <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Mot de passe</label>
+                    <input type="password" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
+                  </div>
+                  <div class="form-group ">
+                    <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
