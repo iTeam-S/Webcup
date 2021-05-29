@@ -15,7 +15,7 @@ $("#submits").click(function(e){
         },
         error: function (xhr, status, err) {
             console.error(xhr, status, err);
-           alert("tsy nety");
+            alert("tsy nety");
         }
     });
 });
