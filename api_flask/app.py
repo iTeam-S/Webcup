@@ -3,9 +3,29 @@ from datetime import date, datetime
 import json
 from web3 import Web3
 from solcx import compile_standard
+import jwt
 
+def encode_auth_token(_id):
+    """
+    Generates the Auth Token
+    :return: string
+    """
+    try:
+        payload = {
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=5),
+            'iat': datetime.datetime.utcnow(),
+            'sub': user_id
+        }
+        return jwt.encode(
+            payload,
+            app.config.get('SECRET_KEY'),
+            algorithm='HS256'
+        )
+    except Exception as e:
+        return e
 
 app = Flask(__name__)
+app.config["DEBUG"] = True
 
 with open('contrats.sol', 'r') as fichier:
     ficVal = fichier.read()
@@ -75,7 +95,11 @@ def register() :
         vote.functions.insert_user(
             id_, nom, prenom, adresse, ville, mdp, email
         ).transact()
-        return "<p>L'user est ajoutée au base de donnée. </p>", 200
+        result = {
+            'id' : id_ ,
+            'token' : encode_auth_token(id_)
+        }, 
+        return result, 200
         
     else :
         return "Il y a un élement manquant", 404
@@ -84,6 +108,8 @@ def register() :
 @app.route('/api/v1/all_user', methods = ["GET"])
 def view_data():
     return str(vote.functions.all_user().call())
+
+# @app.route('/')
 
 app.run(host='0.0.0.0', port=8082)
 
