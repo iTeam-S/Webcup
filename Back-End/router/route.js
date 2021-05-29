@@ -1,12 +1,18 @@
-var controller = require("../controller/user");
-var middleware = require("../middleware/auth");
+const user = require("../controller/user");
+const transaction = require("../controller/transaction");
+const middleware = require("../middleware/auth");
 
 // On injecte le router d"express, nous en avons besoin pour définir les routes 
 module.exports = function(router) {   
-    router.get("/", controller.index);
+    router.get("/", user.index);
 
     //USER
-    router.post("/api/v1/register", controller.register);
-    router.post("/api/v1/login", controller.login);
-    router.post("/api/v1/update", controller.update);
+    router.post("/api/v1/register", user.register);
+    router.post("/api/v1/login", user.login);
+    router.post("/api/v1/update", user.update);
+
+    //TRANSACTION
+    router.post("/api/v1/investir", transaction.investir);
+    router.get("/api/v1/investissement", transaction.get_investissement);
+    router.get("/api/v1/statistique", transaction.statistique);
 };
