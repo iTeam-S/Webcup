@@ -45,7 +45,7 @@ module.exports = {
     login: function(req, res){
         console.log("==> POST LOGIN");
         var email = req.body.email, mdp = req.body.pass;
-        if(email){
+        if(email && mdp){
             connexion.then(function(db){
                 service.return_user_email(email, db).then(function(resultat){
                     if(resultat == "Vérifier votre adresse email"){
