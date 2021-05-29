@@ -642,7 +642,7 @@
 
     <!-- Modal -->
       <!-- Modal  Login-->
-      <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="ModalLogin" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content rounded-0">
             <div class="modal-body py-0">
@@ -655,15 +655,16 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="email">Adresse email</label>
-                      <input type="email" class="form-control" id="email">
+                      <input type="email" class="form-control" id="emails">
                     </div>
                     <div class="form-group">
                       <label for="password">Mot de passe</label>
-                      <input type="password" class="form-control" id="password">
+                      <input type="password" class="form-control" id="passs">
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br>
+                      <div id="g-recaptcha-error" style="color:red;"></div></br>
                     <div class="form-group">
-                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block" id="submits">
                     </div>
                     <div class="form-group ">
                       <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
@@ -671,32 +672,13 @@
                   </form>
                 </div>
               </div>
-              <div class="content-text p-4">
-                <h3>Se connecter</h3>
-                <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
-                <form >
-                  <div class="form-group">
-                    <label for="emails">Adresse email</label>
-                    <input type="email" class="form-control" id="emails">
-                  </div>
-                  <div class="form-group">
-                    <label for="passs">Mot de passe</label>
-                    <input type="password" class="form-control" id="passs">
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Se connecter" class="btn btn-primary btn-block" id="submits">
-                  </div>
-                  <div class="form-group ">
-                    <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
-                  </div>
-                </form>
             </div>
           </div>
         </div>
       </div><!-- End Modal  Login-->
 
       <!-- Modal  Register-->
-      <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="ModalRegister" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content rounded-0">
             <div class="modal-body py-0">
@@ -735,7 +717,7 @@
                       <label for="confirmpass">Confirmer votre mot de passe *</label>
                       <input type="text" class="form-control" id="confirmpass">
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y" data-callback="verifyCaptcha"></div>
                     <div class="form-group">
                       <input type="submit" value="Créer votre compte" class="btn btn-primary btn-block">
                     </div>
@@ -747,8 +729,6 @@
         </div>
       </div><!-- End Modal  Login-->
 
-  <!-- Recaptcha -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -772,6 +752,15 @@
   <script src="assets/jss/main.js"></script>
  
   <script src="assets/js/app.js"></script>
+
+    <!-- Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script>
+    function verifyCaptcha() {
+        $("#g-recaptcha-error").text("")
+    }
+  </script>
 
 </body>
 
