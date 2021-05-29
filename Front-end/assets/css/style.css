@@ -636,6 +636,7 @@ section {
   font-weight: 500;
   font-size: 24px;
   color: #193a50;
+  margin-top: 9%;
 }
 
 .about .content ul {
@@ -659,8 +660,9 @@ section {
 
 .about .content p:last-child {
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 0;
+  color: #555;
 }
 
 .about .play-btn {
@@ -806,9 +808,10 @@ section {
   background-color: #ff4a17;
   border-radius: 4px;
   text-align: center;
-  border: 4px solid #fff;
+  /* border: 4px solid #fff; */
   transition: 0.3s;
   display: inline-block;
+  border-radius: 50px;
 }
 
 .about-boxes .card-body {
@@ -830,6 +833,7 @@ section {
 
 .about-boxes .card-text {
   color: #5e5e5e;
+  text-align: center;
 }
 
 .about-boxes .card:hover .card-icon i {
@@ -1032,6 +1036,12 @@ section {
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
+}
+
+.testimonial-img2{
+  width: 80% !important;
+  margin-left: 7%;
+  border-radius: 15px;
 }
 
 .testimonials .testimonial-item h3 {
@@ -1703,63 +1713,17 @@ section {
   transition: 0.3s;
 }
 
-/* Modal */
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
 
-.logo img {
-  width: 70px; }
 
-.custom-note {
-  color: #999; }
-  .custom-note a {
-    color: #555;
-    font-weight: 900 !important; }
-
-.modal {
-  border-radius: 7px;
-  overflow: hidden;
-  background-color: transparent; }
-  .modal .logo a img {
-    width: 30px; }
-  .modal .modal-content {
-    background-color: transparent;
-    border: none;
-    border-radius: 7px; }
-    .modal .modal-content .modal-body {
-      border-radius: 7px;
-      overflow: hidden;
-      background-color: #fff;
-      padding-left: 0px;
-      padding-right: 0px;
-      -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9); }
-      .modal .modal-content .modal-body h2 {
-        font-size: 18px; }
-      .modal .modal-content .modal-body p {
-        color: #777;
-        font-size: 14px; }
-      .modal .modal-content .modal-body h3 {
-        color: #000;
-        font-size: 22px; }
-      .modal .modal-content .modal-body .close-btn {
-        color: #000; }
-      .modal .modal-content .modal-body .promo-img {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%; }
-  .modal .cancel {
-    color: gray;
-    font-size: 14px; }
-  .modal .btn-primary {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-
-.form-control {
-  border: transparent;
-  border: 1px solid #ccc; }
-  .form-control:active, .form-control:focus, .form-control:hover {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
+.invest{
+  text-align: center !important;
+  padding: 8px;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  background-color: #0d2433;
+  border-radius: 30px;
+  color: #fff;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  max-width: 160px;
+  margin-left: 24%;
+}
