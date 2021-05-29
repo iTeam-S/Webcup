@@ -191,7 +191,7 @@
               <div class="card-body">
                 <h5 class="card-title"><a href="">Faire un don</a></h5>
                 <p class="card-text">Faire un don pour faire avancer l'entreprise</p>
-                <p class="invest">Faire un don</p>
+                <p class="invest" data-toggle="modal" data-target="#ModalLogin" >Faire un don </p>
               </div>
             </div>
           </div>
@@ -576,7 +576,7 @@
             <h4>Newsletter</h4>
             <p>Inscrivez-vous pour recevoir les derniers nouveautés</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="S'inscrire">
             </form>
 
           </div>
@@ -679,7 +679,7 @@
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
                     <div class="form-group">
-                      <input type="submit" value="S'enregistrer" class="btn btn-primary btn-block">
+                      <input type="submit" value="S'enregistrer" class="btn btn-primary btn-block logbtn">
                     </div>
                   </form>
                 </div>
@@ -688,6 +688,38 @@
           </div>
         </div>
       </div><!-- End Modal  Login-->
+
+      <!-- Modal  Don-->
+      <div class="modal fade" id="ModaLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
+              <div class="d-flex main-content">
+                <div class="content-text p-4">
+                  <h3 class="logtext">S'identifier</h3>
+                  <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="email" class="logtext" style="font-size: 13px;">Adresse email</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div>
+                    <div class="form-group">
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block logbtn">
+                    </div>
+                    <div class="form-group ">
+                      <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div><!-- End Modal  Don-->
 
   <!-- Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
