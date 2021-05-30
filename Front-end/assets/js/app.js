@@ -92,6 +92,37 @@ $("#submits").click(function(e){
     }
 });
 
+function investir(type, montant, cle){
+    if($.session.get('token')){
+        e.preventDefault(type + montant + cle + $.session.get('id'));
+        console.log()
+        $.ajax({
+            type: "POST",
+            url: "https://api.iteam-s.mg/api/v1/save_transaction",           
+            data:{
+                montant:  montant,
+                cle:  cle,
+                type: type,
+                token: $.session.get('token'),
+                id: $.session.get('id'),
+            },
+            success: function (result) {
+                console.log(result);
+                if(result === true){
+                    $("#s_investir").modal('hide');
+                }    	               
+            },
+            error: function (result, status, err) {
+                console.log(result);
+            } 
+        })
+    }
+    else{
+        alert("Vous devez d'abord vous connecter");
+    }
+    
+}
+
 
 $(document).ready(function(){
 
