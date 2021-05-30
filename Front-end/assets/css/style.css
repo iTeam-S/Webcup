@@ -1,6 +1,6 @@
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #444444;
 }
 
@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
   font-size: 14px;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Raleway";
   text-transform: none;
   font-weight: 600;
   padding: 0 3px;
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Raleway";
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .seconn{
   margin-left: 25px;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Raleway";
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .seconn:hover{
   margin-left: 25px;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Raleway";
   color: #fff;
   border-radius: 4px;
   padding: 8px 25px;
@@ -696,7 +696,7 @@ section {
 }
 
 .about .content h3 {
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Raleway";
   font-weight: 500;
   font-size: 24px;
   color: #0da350;
@@ -723,7 +723,7 @@ section {
 }
 
 .about .content p:last-child {
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Poppins";
   font-size: 16px;
   margin-bottom: 0;
   color: #555;
@@ -1793,7 +1793,7 @@ section {
   background-color: #0d2433;
   border-radius: 30px;
   color: #fff;
-  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  font-family: "Poppins";
   max-width: 160px;
   margin-left: 24%;
   cursor: pointer;
