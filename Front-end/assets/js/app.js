@@ -1,17 +1,17 @@
 $("#creer").click(function(e){
-    console.mpg("==> CREATION USER");
     e.preventDefault();
     $("#creer").html('<img src="/assets/img/infinity.gif" style="width:10%">');
-    var response = grecaptcha.getResponse();
+/*    var response = grecaptcha.getResponse();
+    console.log(response);
     if(response.length == 0) {
         $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
         $("#creer").html("S'enregistrer")
     }
-    else{
+    else{*/
         var mdp1 = $("#pass").val();
         var mdp2 = $("#re_pass").val();
+        console.log(mdp1+mdp2);
         if(mdp1 === mdp2){
-            console.log(nom + prenom + email + adresse +  ville + mdp1);
             $.ajax({
                 type: "POST",
                 url: "https://api.iteam-s.mg/api/v1/register", 
@@ -24,11 +24,11 @@ $("#creer").click(function(e){
                     prenom: $("#prenom").val()
                 },
                 success: function (result) {
-                    console.log({Success :result});
+                    console.log(result);
                     $.session.set('token', result.token);
                     $.session.set('id', result.id);
-                    $.session.set('nom', result.nom);
-                    $.session.set('prenom', result.prenom);
+                    $.session.set('nom', result.data[1]);
+                    $.session.set('prenom', result.data[2]);
                     var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
                     $("#bouton_connecter").empty();
                     $("#bouton_connecter").append(
@@ -48,7 +48,7 @@ $("#creer").click(function(e){
         else{
             $("#g-recaptcha-error").text("Confirmation mot de passe incorrecte")
         }
-    }
+    /*}*/
     
 });
 
@@ -73,8 +73,8 @@ $("#submits").click(function(e){
                 console.log(result);
                 $.session.set('token', result.token);
                 $.session.set('id', result.id);
-                $.session.set('nom', result.nom);
-                $.session.set('prenom', result.prenom);
+                $.session.set('nom', result.data[1]);
+                $.session.set('prenom', result.data[2]);
                 var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
                 $("#bouton_connecter").empty();
                 $("#bouton_connecter").append(
@@ -90,6 +90,29 @@ $("#submits").click(function(e){
             }
         });
     }
+});
+
+
+$(document).ready(function(){
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+
 });
 
 
