@@ -1,8 +1,8 @@
 $("#submits").click(function(e){
     e.preventDefault();
-    $("#submits").html('<img src="/assets/img/infinity.gif" style="width:10%">') 
+    // $("#submits").html('<img src="/assets/img/infinity.gif" style="width:10%">') 
     var response = grecaptcha.getResponse();
-    if(response.length == 0) {
+    if(response.length == 1) {
         $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
         $("#submits").html('Se connecter')
     }
@@ -39,10 +39,6 @@ $("#submits").click(function(e){
             }
         });
     }
-        /*
-        $("#g-recaptcha-error").text("Veuillez vérifier le captcha")
-    
-    */
 });
 
 
@@ -59,24 +55,23 @@ $("#creer").click(function(e){
     e.preventDefault();
     console.log("CREER");
     var response = grecaptcha.getResponse();
-    var mdp1 = $("#pass").val(), mdp2 = $("#re_pass").val();
+    var mdp1 = $("#pass").val(), mdp2 = $("#re_pass").val(), email = $("#email_new").val();
     if(mdp1 === mdp2){
         $.ajax({
             type: "POST",
-            url: "http://localhost:8082/api/v1/register",
-            contentType: 'application/json',
-            headers: { 'Access-Control-Allow-Origin': '*' },
-            data: JSON.stringify({
-                email:  $("#emails").val(),
+            url: "https://api.iteam-s.mg/api/v1/register",
+            data:{
+                email:  email,
                 pass:  mdp1,
                 re_pass: mdp2,
                 ville: $("#ville").val(),
                 adresse: $("#adresse").val(),
                 nom: $("#nom").val(),
                 prenom: $("#prenom").val()
-            }),
+            },
             success: function (result) {
                 console.log(result);
+                /*
                 $.session.set('token', result.token);
                 $.session.set('id', result.id);
                 $.session.set('nom', result.nom);
@@ -87,6 +82,7 @@ $("#creer").click(function(e){
                     '<nav class="nav-menu d-none d-lg-block"><ul><li class="drop-down"><a href="">' + $.session.get('prenom') +'</a><ul><li><a href="#" onclick="deconnecter()">Se déconnecter</a></li></ul></li></ul></nav>'
                 )       	
                 $("#ModalLogin").modal('hide');
+                */
             },
             error: function (result, status, err) {
                 console.error(result, status, err);
