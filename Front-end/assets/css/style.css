@@ -1,13 +1,4 @@
-/**
-* Template Name: Dewi - v2.2.1
-* Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -695,6 +686,11 @@ section {
   color: #477392;
 }
 
+
+.leg-min{
+  font-family: "Raleway";
+  font-size: 13.5px;
+}
 .about .content {
   font-size: 15px;
 }
@@ -703,7 +699,7 @@ section {
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
   font-weight: 500;
   font-size: 24px;
-  color: #193a50;
+  color: #0da350;
   margin-top: 9%;
 }
 
@@ -832,7 +828,7 @@ section {
 # About Boxes
 --------------------------------------------------------------*/
 .about-boxes {
-  background: url("../img/about-boxes-bg.jpg") center top no-repeat fixed;
+  background: url("../img/hero-bg.jpg") center top no-repeat fixed;
   background-size: cover;
   padding: 60px 0 30px 0;
   position: relative;
@@ -845,7 +841,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: #091219;
   z-index: 9;
 }
 
@@ -1074,7 +1070,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background: url("../img/hero-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1087,7 +1083,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(13, 20, 26, 0.7);
+  background: rgba(13, 20, 26, 0.938);
 }
 
 .testimonials .section-header {
@@ -1108,6 +1104,12 @@ section {
 
 .testimonial-img2{
   width: 80% !important;
+  margin-left: 7%;
+  border-radius: 15px;
+}
+
+.testimonial-img3{
+  width: 88% !important;
   margin-left: 7%;
   border-radius: 15px;
 }
