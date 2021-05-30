@@ -46,10 +46,7 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
-<!--     <div id="particles-js"></div> -->
-    
     <div class="container-fluid d-flex align-items-center justify-content-between">
-
       <h1 class="logo"><a href="index.html">iCoin-$</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -69,12 +66,14 @@
         <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
         <a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
       </div>
+
     </div>
-    <!-- <div id="particles-js" style=" width: 100% ; position:absolute; opacity: 0.1;"></div> -->
+    
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+    <div id="particles-js" style="z-index:1, position:absolute; opacity: 1;"></div>
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
       <h1 style="text-align: left !important;"> Plateforme d'échange du futur </h1>
       <h2>N'attendez plus, avançons ensemble pour notre pays </h2>
@@ -587,7 +586,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Newsletter</h4>
-            <p>Inscrivez-vous pour recevoir de nos nouvelles</p>
+            <p>Inscrivez-vous pour recevoir les dernières nouveautés</p>
+
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="S'inscrire">
             </form>
@@ -708,15 +708,15 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                      <input type="number" class="form-control" id="montant_don" placeholder="Montant en icoin-$">
+                      <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
                     </div>
                     <div class="form-group">
-                      <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
-                      <input type="text" class="form-control" id="cle_don" placeholder="Clé">
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                      <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                     <div class="form-group">
-                      <input type="button" onclick="investir('don', document.getElementById('montant_don'), document.getElementById('cle_don'))" value="Faire un don" class="btn btn-primary btn-block logbtn">
+                      <input type="submit" value="Faire un don" class="btn btn-primary btn-block logbtn">
                     </div>
                   </form>
                 </div>
@@ -740,15 +740,15 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                      <input type="number" class="form-control" id="montant_inv" placeholder="Montant en icoin-$">
+                      <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
                     </div>
                     <div class="form-group">
-                      <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
-                      <input type="text" class="form-control" id="cle_inv" placeholder="Clé">
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                      <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                     <div class="form-group">
-                      <input type="button" id="s_investir" value="S'investir" class="btn btn-primary btn-block logbtn" onclick="investir('investissement', document.getElementById('montant_inv'), document.getElementById('cle_inv'))">
+                      <input type="submit" value="S'investir" class="btn btn-primary btn-block logbtn">
                     </div>
                   </form>
                 </div>
@@ -773,15 +773,15 @@
                 <form action="#">
                   <div class="form-group">
                     <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                    <input type="number" class="form-control" id="montant_act" placeholder="Montant en icoin-$">
+                    <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
                   </div>
                   <div class="form-group">
-                    <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
-                    <input type="text" class="form-control" id="cle_act" placeholder="Clé">
+                    <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                    <input type="password" class="form-control" id="password">
                   </div>
                   <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                   <div class="form-group">
-                    <input type="button" value="Faire une action" class="btn btn-primary btn-block logbtn" onclick="investir('actionnaire', document.getElementById('montant_act'), document.getElementById('cle_act'))">
+                    <input type="submit" value="Faire une action" class="btn btn-primary btn-block logbtn">
                   </div>
                 </form>
               </div>
@@ -849,7 +849,7 @@
                   <h6 style="margin-top: 4%; color: #ff4a17; margin-left: 10%;">Centre éolienne d'Antananarivo</h6>
                   <p style="margin-left: 7%;">
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies.
+                   Investiser sur ces fermes marchant à énérgies éoliennes pour développer l'économie du pays tout en gagnant de l'argent éléctronique.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -859,7 +859,7 @@
                   <h6  style="margin-top: 4%; color: #ff4a17; margin-left: 10%;">Centre géothermique de Diego</h6>
                   <p style="margin-left: 7%;">
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit.
+                    Les centres géothérmiques de Diego sont déjà en place et il ne reste plus qu'à construire la banque de données décentralisés pour la ferme de minage de notre crypto-monnaie.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -868,7 +868,7 @@
                   <h6  style="margin-top: 4%; color: #ff4a17; margin-left: 10%;">Les panneaux solaires de Tuléar</h6>
                   <p style="margin-left: 7%;">
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit.
+                   La chaleur du Sud nous permettra d'obtenir une abondance d'énérgie solaire pour alimentés nos super-calculateurs pour miner notre iCon-s.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
