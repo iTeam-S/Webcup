@@ -329,6 +329,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway";
 }
 
+.img-fluid:hover{
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
 .form-control{
   border-bottom: 1.5px solid #b8b8b8 !important ;
   border-top: 0px !important;
@@ -1796,6 +1801,7 @@ section {
   margin-left: 28%;
   font-family: "Raleway";
   font-size: 13px;
+  cursor: pointer;
 }
 
 
@@ -1860,3 +1866,5 @@ section {
   .form-control:active, .form-control:focus, .form-control:hover {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
+
+

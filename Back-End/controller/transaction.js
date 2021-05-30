@@ -2,11 +2,9 @@ const connexion = require("../service/connexion")();
 const service = require("../service/service");
 var Web3 = require('web3');
 const solc = require('solc');
-
+/*
 var web3 = new Web3(new Web3.providers.HttpProvider('http://185.98.128.90:8545'));
 
-
-/*
 service.read_file("service/contrats.sol").then(function(source){
 
     var input = {
@@ -30,7 +28,7 @@ service.read_file("service/contrats.sol").then(function(source){
     var abi = contr.contracts['contrats.sol']['Webcup'].abi
     web3.eth.getAccounts().then(function(accounts){
         var web = new web3.eth.Contract(abi, accounts[0])
-       // web.methods.helloWorld().transact((err, resultat)=> {console.log(err.toString())});
+       web.methods.helloWorld().call((err, resultat)=> {console.log(err)});
     })
     
     //
@@ -38,8 +36,6 @@ service.read_file("service/contrats.sol").then(function(source){
 })
 
 */
-
-
 module.exports = {
     investir: function(req, res){
         console.log("==> POST INVESTIR");
