@@ -1,5 +1,4 @@
 $("#creer").click(function(e){
-    console.mpg("==> CREATION USER");
     e.preventDefault();
     $("#creer").html('<img src="/assets/img/infinity.gif" style="width:10%">');
 /*    var response = grecaptcha.getResponse();
@@ -11,8 +10,8 @@ $("#creer").click(function(e){
     else{*/
         var mdp1 = $("#pass").val();
         var mdp2 = $("#re_pass").val();
+        console.log(mdp1+mdp2);
         if(mdp1 === mdp2){
-            console.log(nom + prenom + email + adresse +  ville + mdp1);
             $.ajax({
                 type: "POST",
                 url: "https://api.iteam-s.mg/api/v1/register", 
@@ -25,11 +24,11 @@ $("#creer").click(function(e){
                     prenom: $("#prenom").val()
                 },
                 success: function (result) {
-                    console.log({Success :result});
+                    console.log(result);
                     $.session.set('token', result.token);
                     $.session.set('id', result.id);
-                    $.session.set('nom', result.nom);
-                    $.session.set('prenom', result.prenom);
+                    $.session.set('nom', result.data[1]);
+                    $.session.set('prenom', result.data[2]);
                     var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
                     $("#bouton_connecter").empty();
                     $("#bouton_connecter").append(

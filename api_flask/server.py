@@ -95,7 +95,7 @@ def register() :
     ville = query_parameters.get('ville')
     adresse = query_parameters.get('adresse')
     email = query_parameters.get('email')
-    mdp = hashlib.sha224(str(query_parameters.get('mdp')).encode()).hexdigest()
+    mdp = hashlib.sha224(str(query_parameters.get('pass')).encode()).hexdigest()
 
     if  (nom and prenom and ville  and adresse and email and mdp):
         recup_user = vote.functions.all_user().call()
