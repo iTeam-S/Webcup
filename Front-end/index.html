@@ -708,15 +708,15 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                      <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
+                      <input type="number" class="form-control" id="montant_don" placeholder="Montant en icoin-$">
                     </div>
                     <div class="form-group">
-                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
-                      <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                      <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
+                      <input type="text" class="form-control" id="cle_don" placeholder="Clé">
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                     <div class="form-group">
-                      <input type="submit" value="Faire un don" class="btn btn-primary btn-block logbtn">
+                      <input type="button" onclick="investir('don', document.getElementById('montant_don'), document.getElementById('cle_don'))" value="Faire un don" class="btn btn-primary btn-block logbtn">
                     </div>
                   </form>
                 </div>
@@ -740,15 +740,15 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                      <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
+                      <input type="number" class="form-control" id="montant_inv" placeholder="Montant en icoin-$">
                     </div>
                     <div class="form-group">
-                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
-                      <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                      <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
+                      <input type="text" class="form-control" id="cle_inv" placeholder="Clé">
                     </div>
                     <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                     <div class="form-group">
-                      <input type="submit" value="S'investir" class="btn btn-primary btn-block logbtn">
+                      <input type="button" id="s_investir" value="S'investir" class="btn btn-primary btn-block logbtn" onclick="investir('investissement', document.getElementById('montant_inv'), document.getElementById('cle_inv'))">
                     </div>
                   </form>
                 </div>
@@ -773,15 +773,15 @@
                 <form action="#">
                   <div class="form-group">
                     <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
-                    <input type="number" class="form-control" id="email" placeholder="Montant en icoin-$">
+                    <input type="number" class="form-control" id="montant_act" placeholder="Montant en icoin-$">
                   </div>
                   <div class="form-group">
-                    <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
-                    <input type="password" class="form-control" id="password">
+                    <label for="password" class="logtext" style="font-size: 13px;">Clé publique cryptomonnaie</label>
+                    <input type="text" class="form-control" id="cle_act" placeholder="Clé">
                   </div>
                   <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                   <div class="form-group">
-                    <input type="submit" value="Faire une action" class="btn btn-primary btn-block logbtn">
+                    <input type="button" value="Faire une action" class="btn btn-primary btn-block logbtn" onclick="investir('actionnaire', document.getElementById('montant_act'), document.getElementById('cle_act'))">
                   </div>
                 </form>
               </div>
