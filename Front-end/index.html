@@ -1,6 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
+  <!-- =======================================================
+  * Template Name: I-Team-$ - v0.0.1
+  * Author: i-Teams-$
+  * License: open source
+  ======================================================== -->
+  
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">  
@@ -32,6 +39,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
   <link rel="stylesheet" href="assets/csss/style.css">
 
+
 </head>
 
 <body>
@@ -52,17 +60,13 @@
           <li><a href="#team">Equipe</a></li>
           <li><a href="#contact">Contact</a></li>
 
-
-
         </ul>
       </nav><!-- .nav-menu -->
 
-      <div id="bouton_connecter">
-
+      <div>
         <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
         <a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
-
-        </div>
+      </div>
     </div>
   </header><!-- End Header -->
 
@@ -457,7 +461,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up"">
 
     <div class=" section-title">
         <h2>Contact</h2>
@@ -568,8 +572,7 @@
             <h4>Nos Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Investissement</a></li>
-              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Suivre vos transactions</a></li>
-              
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="#services">Web Development</a></li>
             </ul>
           </div>
 
@@ -624,10 +627,10 @@
                       <label for="password" class="logtext">Mot de passe</label>
                       <input type="password" class="form-control" id="passs">
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></br>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br> -->
                       <div id="g-recaptcha-error" style="color:red;"></div></br>
                     <div class="form-group">
-                      <button id="submits" type="submit" class="btn btn-primary btn-block" >Se connecter</button>
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block logbtn" id="submits">
                     </div>
                     <div class="form-group ">
                       <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
@@ -637,8 +640,8 @@
               </div>
             </div>
           </div>
-        </div><!-- End Modal  Login-->
-      </div>
+        </div>
+      </div><!-- End Modal  Login-->
 
       <!-- Modal  Register-->
       <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="ModalRegister" aria-hidden="true">
@@ -654,11 +657,11 @@
                   <form action="#">
                     <div class="form-group">
                       <label for="name" class="logtext" style="font-size: 13px;">Nom *</label>
-                      <input type="text" class="form-control" id="nom">
+                      <input type="text" class="form-control" id="name">
                     </div>
                     <div class="form-group">
                       <label for="prename" class="logtext" style="font-size: 13px;">Prénoms*</label>
-                      <input type="text" class="form-control" id="prenom">
+                      <input type="text" class="form-control" id="prename">
                     </div>
                     <div class="form-group">
                       <label for="adresse" class="logtext" style="font-size: 13px;">Adresse*</label>
@@ -666,7 +669,7 @@
                     </div>
                     <div class="form-group">
                       <label for="adresse" class="logtext" style="font-size: 13px;">Ville*</label>
-                      <input type="text" class="form-control" id="ville">
+                      <input type="text" class="form-control" id="adresse">
                     </div>
                     <div class="form-group">
                       <label for="email" class="logtext" style="font-size: 13px;">Email*</label>
@@ -674,18 +677,15 @@
                     </div>
                     <div class="form-group">
                       <label for="password" class="logtext" style="font-size: 13px;">Mot de passe *</label>
-                      <input type="password" class="form-control" id="pass">
+                      <input type="password" class="form-control" id="password">
                     </div>
                     <div class="form-group">
                       <label for="confirmpass" class="logtext" style="font-size: 13px;">Confirmer votre mot de passe *</label>
-                      <input type="password" class="form-control" id="re_pass">
+                      <input type="text" class="form-control" id="confirmpass">
                     </div>
-
                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y" data-callback="verifyCaptcha"></div>
-                      <div id="g-recaptcha-error-creer" style="color:red;"></div></br>
-
                     <div class="form-group">
-                      <input type="button" id="creer" value="S'enregistrer" class="btn btn-primary btn-block">
+                      <input type="submit" value="S'enregistrer" class="btn btn-primary btn-block logbtn">
                     </div>
                   </form>
                 </div>
@@ -800,7 +800,7 @@
             <div class="d-flex main-content">
               <div class="content-text p-4">
                 <h3 class="logtext">Faire une estimation</h3>
-                <p>Estimez vos bénéfices</p>
+                <p>Estimez vos interêts</p>
                 <form action="#">
                   <div class="form-group">
                     <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
@@ -844,6 +844,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="assets/jss/popper.js"></script>
   <script src="assets/jss/bootstrap.min.js"></script>
   <script src="assets/jss/owl.carousel.min.js"></script>
@@ -858,15 +859,6 @@
   <script src="https://d3js.org/d3.v3.min.js"></script>
 
   <script>
-        $( document ).ready(function() {
-            console.log( "ready!" );
-            if($.session.get('id') &&  $.session.get('prenom') && $.session.get('nom')){
-              $("#bouton_connecter").empty();
-              $("#bouton_connecter").append(
-                  '<nav id = "connecter" class="nav-menu d-none d-lg-block"><ul><li class="drop-down"><a href="">' + $.session.get('prenom') +'</a><ul><li><a href="#" onclick="deconnecter()">Se déconnecter</a></li></ul></li></ul></nav>'
-              )       	
-            }
-        });
 
         //chart
 				var ctx = document.getElementById('myChart').getContext('2d');
@@ -949,5 +941,8 @@
 				});
 
     </script>
+
+
 </body>
+
 </html>
