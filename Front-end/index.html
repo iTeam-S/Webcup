@@ -65,7 +65,7 @@
       </nav><!-- .nav-menu -->
 
       <div>
-        <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalPop">Se connecter</a>
+        <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
         <a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
       </div>
     </div>
@@ -632,10 +632,11 @@
                       <label for="password" class="logtext">Mot de passe</label>
                       <input type="password" class="form-control" id="passs">
                     </div>
+
                      <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br>
                       <div id="g-recaptcha-error" style="color:red;"></div></br>
                     <div class="form-group">
-                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block logbtn" id="submits">
+                      <button type="submit" id="submits" class="btn btn-primary btn-block logbtn">Se connecter</button>
                     </div>
                     <div class="form-group ">
                       <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
@@ -646,7 +647,8 @@
             </div>
           </div>
         </div>
-      </div><!-- End Modal  Login-->
+      </div>
+      <!-- End Modal  Login-->
 
       <!-- Modal  Register-->
       <div class="modal fade" id="ModalRegister" tabindex="-1" role="dialog" aria-labelledby="ModalRegister" aria-hidden="true">
@@ -661,11 +663,11 @@
                   <p>Veuillez remplir le formulaire pour créer un compte</p>
                   <form action="#">
                     <div class="form-group">
-                      <label for="name" class="logtext" style="font-size: 13px;">Nom *</label>
+                      <label for="nom" class="logtext" style="font-size: 13px;">Nom *</label>
                       <input type="text" class="form-control" id="nom">
                     </div>
                     <div class="form-group">
-                      <label for="prename" class="logtext" style="font-size: 13px;">Prénom*</label>
+                      <label for="prenom" class="logtext" style="font-size: 13px;">Prénoms*</label>
                       <input type="text" class="form-control" id="prenom">
                     </div>
                     <div class="form-group">
@@ -673,24 +675,27 @@
                       <input type="text" class="form-control" id="adresse">
                     </div>
                     <div class="form-group">
-                      <label for="adresse" class="logtext" style="font-size: 13px;">Ville*</label>
+
+                      <label for="ville" class="logtext" style="font-size: 13px;">Ville*</label>
                       <input type="text" class="form-control" id="ville">
                     </div>
                     <div class="form-group">
                       <label for="email" class="logtext" style="font-size: 13px;">Email*</label>
-                      <input type="email" class="form-control" id="email_cr">
+                      <input type="email" class="form-control" id="email_r">
+
                     </div>
                     <div class="form-group">
                       <label for="password" class="logtext" style="font-size: 13px;">Mot de passe *</label>
                       <input type="password" class="form-control" id="pass">
                     </div>
                     <div class="form-group">
-                      <label for="confirmpass" class="logtext" style="font-size: 13px;">Confirmer votre mot de passe *</label>
+                      <label for="re_pass" class="logtext" style="font-size: 13px;">Confirmer votre mot de passe *</label>
                       <input type="password" class="form-control" id="re_pass">
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y" data-callback="verifyCaptcha"></div>
                     <div class="form-group">
-                      <input id="creer" type="submit" value="S'enregistrer" class="btn btn-primary btn-block logbtn">
+                      <button type="submit" id="creer" class="btn btn-primary btn-block logbtn">S'enregistrer</button>
+
                     </div>
                   </form>
                 </div>
