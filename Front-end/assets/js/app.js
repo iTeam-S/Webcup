@@ -73,8 +73,8 @@ $("#submits").click(function(e){
                 console.log(result);
                 $.session.set('token', result.token);
                 $.session.set('id', result.id);
-                $.session.set('nom', result.nom);
-                $.session.set('prenom', result.prenom);
+                $.session.set('nom', result.data[1]);
+                $.session.set('prenom', result.data[2]);
                 var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
                 $("#bouton_connecter").empty();
                 $("#bouton_connecter").append(
@@ -90,6 +90,29 @@ $("#submits").click(function(e){
             }
         });
     }
+});
+
+
+$(document).ready(function(){
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+
 });
 
 

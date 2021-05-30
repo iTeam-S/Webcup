@@ -46,6 +46,7 @@
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
+<!--     <div id="particles-js"></div> -->
     
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
@@ -64,7 +65,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <div>
+      <div id="bouton_connecter">
         <a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a>
         <a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>
       </div>
@@ -822,9 +823,18 @@
                   </div>
                   <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
                   <div class="form-group">
-                    <input type="submit" value="Résultats" class="btn btn-primary btn-block logbtn">
+                    <input id="resbut" type="button" value="Résultats" class="btn btn-primary btn-block logbtn">
                   </div>
                 </form>
+                   <script>
+                    $('#ModalEstim1 #montant').change(function(){
+                        $('#resbut').val(((parseInt($(this).val())*7)/100) * parseInt($('#ModalEstim1 #duree').val()))
+                    });
+
+                     $('#ModalEstim1 #duree').change(function(){
+                        $('#resbut').val(((parseInt($(this).val())*7)/100) * parseInt($('#ModalEstim1 #montant').val()))
+                    })
+                </script>
               </div>
               <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/bitcoin.png');">
               </div>
@@ -941,7 +951,29 @@
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 
+
+  <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
+  <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
+  
   <script>
+      $( document ).ready(function() {
+            console.log( "ready!" );
+            if($.session.get('id') &&  $.session.get('prenom') && $.session.get('nom')){
+              $("#bouton_connecter").empty();
+              $("#bouton_connecter").append(
+                  '<nav id = "connecter" class="nav-menu d-none d-lg-block"><ul><li class="drop-down"><a href="">' + $.session.get('prenom') +'</a><ul><li><a href="#" onclick="deconnecter()">Se déconnecter</a></li></ul></li></ul></nav>'
+              )         
+            }
+        });
+
+        $('#ModalEstim1 #montant').change(function(){
+            $('#resbut').val( ((parseInt($(this).val())*7)/100) * parseInt($('#ModalEstim1 #duree').val()))
+            });
+
+          $('#ModalEstim1 #duree').change(function(){
+            $('#resbut').val(((parseInt($(this).val())*7)/100) * parseInt($('#ModalEstim1 #montant').val()))
+        })
+
     
         //chart
         var ctx = document.getElementById('myChart').getContext('2d');
