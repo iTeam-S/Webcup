@@ -17,7 +17,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/fav.jpg" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -114,7 +114,7 @@
                 <div class="count-box">
                   <i class="icofont-clock-time"></i>
                   <span data-toggle="counter-up" style="color:#fff;">2</span>
-                  <p style="color:#fff;">Years of experience</p>
+                  <p style="color:#fff;">5ans d'expériences</p>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@
                 <div class="count-box">
                   <i class="icofont-award"></i>
                   <span data-toggle="counter-up" style="color:#fff;">1</span>
-                  <p style="color:#fff;">Awards</p>
+                  <p style="color:#fff;">Trophé</p>
                 </div>
               </div>
 
@@ -221,9 +221,9 @@
                 <i class="ri-movie-2-line"></i>
               </div>
               <div class="card-body">
-                <h5 class="card-title">Actionneur</h5>
+                <h5 class="card-title">Actionnaire</h5>
                 <p class="card-text" style="font-size: 14px; font-weight: 500;">Gagnez une part des bénéfices de l'entreprise. </p>
-                <p class="invest" data-toggle="modal" data-target="#ModalAction">Devenir actionneur</p>
+                <p class="invest" data-toggle="modal" data-target="#ModalAction">Devenir actionnaire</p>
                 <p class="estim" data-toggle="modal" data-target="#ModalEstim"><i class="icofont-chart-bar-graph"></i> Faire une estimation</p>
               </div>
             </div>
@@ -241,13 +241,19 @@
           <li class="nav-item col-3" >
             <a class="nav-link active show" data-toggle="tab" href="#tab-1" style="color: #fff; background-color: #091219;">
               <i class="icofont-chart-bar-graph"></i>
-              <h6 class="d-none d-lg-block">Nos statistiques</h6>
+              <h6 class="d-none d-lg-block">Investissements</h6>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-toggle="tab" href="#tab-2" style="color: #fff; background-color: #091219;">
               <i class="icofont-chart-bar-graph"></i>
-              <h6 class="d-none d-lg-block">Nos transactions</h6>
+              <h6 class="d-none d-lg-block">Payement</h6>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-toggle="tab" href="#tab-3" style="color: #fff; background-color: #091219;">
+              <i class="icofont-chart-bar-graph"></i>
+              <h6 class="d-none d-lg-block">Donation</h6>
             </a>
           </li>
         </ul>
@@ -256,10 +262,9 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3 style="margin-top:13%; color: #0da350;">Evolution des transactions des actionnaires dans iCoin-$.</h3>
+                <h3 style="margin-top:13%; color: #0da350;">Evolution des transactions des actionnaires et des investisseurs</h3>
                 <p style="color: #fff;">
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore.
+                  Cette graphe réprésente les investissements du mois
                 </p>
               </div>
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
@@ -270,14 +275,26 @@
           <div class="tab-pane" id="tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3 style="margin-top:13%; color: #0da350;">Evolution des transactions des actionnaires dans iCoin-$.</h3>
+                <h3 style="margin-top:13%; color: #0da350;">Evolution des payements</h3>
                 <p style="color: #fff;">
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore.
+                  Cette graphe réprésente les payements pour les investisseurs
                 </p>
               </div>
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <canvas id="myChart1" width="400" height="230"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="margin-top:13%; color: #0da350;">Evolution des transactions des donnateurs</h3>
+                <p style="color: #fff;">
+                  Les nombres des investisseurs participatifs de tous les mois
+                </p>
+              </div>
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <canvas id="myChart2" width="400" height="230"></canvas>
               </div>
             </div>
           </div>
@@ -384,7 +401,7 @@
             <h4>Citoyen</h4>
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              A même pas un deux mois de la création de mon compte , j'ai déjà reçu plus du double de mon investissement
+              A même pas un deux mois de la création de mon compte , j'ai déjà reçu plus du double de mon investissement.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
           </div>
@@ -412,7 +429,7 @@
               <div class="pic"><img src="assets/img/arleme.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Arleme Johnson</h4>
-                <span>Chief Executive Officer</span>
+                <span>Directeur</span>
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -428,7 +445,7 @@
               <div class="pic"><img src="assets/img/ntsoa.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Manambintsoa</h4>
-                <span>Product Manager</span>
+                <span>Développeur</span>
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -444,7 +461,7 @@
               <div class="pic"><img src="assets/img/rivo.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Rivo Lalaina</h4>
-                <span>CTO</span>
+                <span>Chef de production</span>
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -615,7 +632,8 @@
                       <label for="password" class="logtext">Mot de passe</label>
                       <input type="password" class="form-control" id="passs">
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br>
+
+                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br>
                       <div id="g-recaptcha-error" style="color:red;"></div></br>
                     <div class="form-group">
                       <button type="submit" id="submits" class="btn btn-primary btn-block logbtn">Se connecter</button>
@@ -657,12 +675,14 @@
                       <input type="text" class="form-control" id="adresse">
                     </div>
                     <div class="form-group">
+
                       <label for="ville" class="logtext" style="font-size: 13px;">Ville*</label>
                       <input type="text" class="form-control" id="ville">
                     </div>
                     <div class="form-group">
                       <label for="email" class="logtext" style="font-size: 13px;">Email*</label>
                       <input type="email" class="form-control" id="email_r">
+
                     </div>
                     <div class="form-group">
                       <label for="password" class="logtext" style="font-size: 13px;">Mot de passe *</label>
@@ -672,9 +692,10 @@
                       <label for="re_pass" class="logtext" style="font-size: 13px;">Confirmer votre mot de passe *</label>
                       <input type="password" class="form-control" id="re_pass">
                     </div>
-<!--                     <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y" data-callback="verifyCaptcha"></div> -->
+                    <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y" data-callback="verifyCaptcha"></div>
                     <div class="form-group">
                       <button type="submit" id="creer" class="btn btn-primary btn-block logbtn">S'enregistrer</button>
+
                     </div>
                   </form>
                 </div>
@@ -756,7 +777,7 @@
           <div class="modal-body py-0" style="border-radius: 0px !important;">
             <div class="d-flex main-content">
               <div class="content-text p-4">
-                <h3 class="logtext">Devenir un actionneur</h3>
+                <h3 class="logtext">Devenir un actionnaire</h3>
                 <p>Devenir actionnaire pour récolter plus d'intérêt</p>
                 <form action="#">
                   <div class="form-group">
@@ -924,84 +945,76 @@
   <script>
     
         //chart
-				var ctx = document.getElementById('myChart').getContext('2d');
+        var ctx = document.getElementById('myChart').getContext('2d');
+        const labels = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
 				var chart = new Chart(ctx, {
+          type: 'line',
+          data:{
+            labels: labels,
+            datasets: [{
+              label: 'Investissements en iCoin-$',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [10, 2, 52, 25, 2, 30, 4],
+            }]
+          },
+          options: {}
+        });
 
-					type: 'line',
-					data: {
-						datasets: [{
-							label: 'Transaction',
-							borderColor: '#068a5e',
-							borderWidth: 1,
-							backgroundColor: '#068a5eb7',
-							data: [12, 19, 3, 5, 2, 3]
-            }],
-					},
+        var ctx1 = document.getElementById('myChart1').getContext('2d');
+        const labels1 = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+				var chart1 = new Chart(ctx1, {
+          type: 'line',
+          data:{
+            labels: labels1,
+            datasets: [{
+              label: 'Payement en iCoin-$',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [20, 10, 5, 2, 2, 80, 20],
+            }]
+          },
+          options: {}
+        });
 
-					options: {
-						title: {
-							display: true,
-							text: "Transaction en temps réel"
-						},
-						scales: {
-							xAxes: [{
-								type: 'realtime',
-								realtime: {
-									delay:1000,
-									onRefresh: function(chart) {
-										chart.data.datasets.forEach(function(dataset) {
-											dataset.data.push({
-												x: Date.now(),
-												y: Math.random()
-											});
-										});
-									}
-								},
-							}]
-						}
-					}
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        const labels2 = [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+        ];
+				var chart2 = new Chart(ctx2, {
+          type: 'line',
+          data:{
+            labels: labels2,
+            datasets: [{
+              label: 'Donations en iCoin-$',
+              backgroundColor: 'rgb(255, 99, 132)',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [50, 1, 25, 2, 20, 40, 45],
+            }]
+          },
+          options: {}
         });
         
-
-
-        //Chart1
-        var ctx = document.getElementById('myChart1').getContext('2d');
-				var chart = new Chart(ctx, {
-					type: 'line',
-					data: {
-						datasets: [{
-							label: 'Transaction',
-							borderColor: '#068a5e',
-							borderWidth: 1,
-							backgroundColor: '#068a5eb7',
-							data: [12, 19, 3, 5, 2, 3]
-            }],
-					},
-
-					options: {
-						title: {
-							display: true,
-							text: "Transaction en temps réel"
-						},
-						scales: {
-							xAxes: [{
-								type: 'realtime',
-								realtime: {
-									delay:1000,
-									onRefresh: function(chart) {
-										chart.data.datasets.forEach(function(dataset) {
-											dataset.data.push({
-												x: Date.now(),
-												y: Math.random()
-											});
-										});
-									}
-								},
-							}]
-						}
-					}
-				});
-
+      
     </script>
 
 
