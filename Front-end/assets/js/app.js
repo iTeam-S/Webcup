@@ -49,12 +49,15 @@ $("#creer").click(function(e){
             $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
             $("#submits").html('Se connecter')
         }
+        
         else{
+        console.log($('#email_cr').val() + mdp1 + $("#ville").val() + $("#adresse").val() + $("#nom").val() + $("#prenom").val() );
             $.ajax({
                 type: "POST",
-                url: "https://api.iteam-s.mg/api/v1/login", 
+                headers: {  'Access-Control-Allow-Origin': '*' },
+                url: "https://api.iteam-s.mg/api/v1/register", 
                 data:{
-                    email: $('email').val(),
+                    email: $('#email_cr').val(),
                     pass:  mdp1,
                     ville: $("#ville").val(),
                     adresse: $("#adresse").val(),
@@ -95,4 +98,4 @@ function deconnecter(){
     $("#bouton_connecter").append(
         '<a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a><a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>'
     ) 
-    }
+}
