@@ -1,40 +1,16 @@
 $("#submits").click(function(e){
     e.preventDefault();
+    $("#submits").html('<img src="/assets/img/infinity.gif" style="width:10%">') 
     var response = grecaptcha.getResponse();
-    $.ajax({
-        type: "POST",
-        url: "http://localhost:8082/api/v1/login",
-        contentType: 'application/json',
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        data: JSON.stringify({
-            email:  $("#emails").val(),
-            pass:  $("#passs").val(),
-        }),
-        success: function (result) {
-            console.log(result);
-            $.session.set('token', result.token);
-            $.session.set('id', result.id);
-            $.session.set('nom', result.nom);
-            $.session.set('prenom', result.prenom);
-            var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
-            $("#bouton_connecter").empty();
-            $("#bouton_connecter").append(
-                '<nav class="nav-menu d-none d-lg-block"><ul><li class="drop-down"><a href="">' + $.session.get('prenom') +'</a><ul><li><a href="#" onclick="deconnecter()">Se déconnecter</a></li></ul></li></ul></nav>'
-            )       	
-            $("#ModalLogin").modal('hide');
-        },
-        error: function (result, status, err) {
-            console.error(result, status, err);
-            $("#g-recaptcha-error").text(result);
-        }
-    });/*
-    if(response.length == 1) {
-        $("#g-recaptcha-error").text("Veuillez vérifier le captcha")
+    if(response.length == 0) {
+        $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
+        $("#submits").html('Se connecter')
     }
     else{
+        console.log($("#emails").val(), $("#passs").val(),);
         $.ajax({
             type: "POST",
-            url: "https://api.iteam-s.mg/api/v1/login",
+            url: "http://localhost:8082/api/v1/login",
             contentType: 'application/json',
             headers: { 'Access-Control-Allow-Origin': '*' },
             data: JSON.stringify({
@@ -42,19 +18,30 @@ $("#submits").click(function(e){
                 pass:  $("#passs").val(),
             }),
             success: function (result) {
+                console.log(result);
                 $.session.set('token', result.token);
                 $.session.set('id', result.id);
-
-                var session = $.session.get('token');
-                var id = $.session.get('id');
-                console.log(session);
+                $.session.set('nom', result.nom);
+                $.session.set('prenom', result.prenom);
+                var session = $.session.get('token'), id = $.session.get('id'), nom = $.session.get('nom'), prenom = $.session.get('prenom');
+                $("#bouton_connecter").empty();
+                $("#bouton_connecter").append(
+                    '<nav class="nav-menu d-none d-lg-block"><ul><li class="drop-down"><a href="">' + $.session.get('prenom') +'</a><ul><li><a href="#" onclick="deconnecter()">Se déconnecter</a></li></ul></li></ul></nav>'
+                );
+                 $("#submits").html('Se connecter');       	
+                $("#ModalLogin").modal('hide');
             },
             error: function (result, status, err) {
+                console.log(result);
                 console.error(result, status, err);
-                $("#g-recaptcha-error").text(result);
+                $("#g-recaptcha-error").text(JSON.stringify(result));
+                $("#submits").html('Se connecter')
             }
         });
     }
+        /*
+        $("#g-recaptcha-error").text("Veuillez vérifier le captcha")
+    
     */
 });
 
