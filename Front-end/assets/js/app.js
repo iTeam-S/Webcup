@@ -1,12 +1,13 @@
 $("#creer").click(function(e){
     e.preventDefault();
     $("#creer").html('<img src="/assets/img/infinity.gif" style="width:10%">');
-    var response = grecaptcha.getResponse();
+/*    var response = grecaptcha.getResponse();
+    console.log(response);
     if(response.length == 0) {
         $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
         $("#creer").html("S'enregistrer")
     }
-    else{
+    else{*/
         var mdp1 = $("#pass").val();
         var mdp2 = $("#re_pass").val();
         console.log(mdp1+mdp2);
@@ -47,7 +48,7 @@ $("#creer").click(function(e){
         else{
             $("#g-recaptcha-error").text("Confirmation mot de passe incorrecte")
         }
-    }
+    /*}*/
     
 });
 
