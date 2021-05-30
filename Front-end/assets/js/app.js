@@ -2,7 +2,7 @@ $("#submits").click(function(e){
     e.preventDefault();
     $("#submits").html('<img src="/assets/img/infinity.gif" style="width:10%">') 
     var response = grecaptcha.getResponse();
-    if(response.length == 0) {
+    if(response.length == 1) {
         $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
         $("#submits").html('Se connecter')
     }
@@ -54,8 +54,12 @@ $("#creer").click(function(e){
                 type: "POST",
                 url: "https://api.iteam-s.mg/api/v1/login", 
                 data:{
-                    email:  $("#emails").val(),
-                    pass:  $("#passs").val(),
+                    email: $('email').val(,
+                    pass:  mdp1,
+                    ville: $("#ville").val(),
+                    adresse: $("#adresse").val(),
+                    nom: $("#nom").val(),
+                    prenom: $("#prenom").val()
                 },
                 success: function (result) {
                     console.log(result);
@@ -79,6 +83,9 @@ $("#creer").click(function(e){
             }); 
         }
     }
+    else{
+        $("#g-recaptcha-error").text("Confirmation mot de passe incorrecte")
+    }
 });
 
 function deconnecter(){
@@ -88,4 +95,4 @@ function deconnecter(){
     $("#bouton_connecter").append(
         '<a href="#" class="get-started-btn scrollto" data-toggle="modal" data-target="#ModalLogin">Se connecter</a><a href="#" class="scrollto seconn" data-toggle="modal" data-target="#ModalRegister">Créer un compte</a>'
     ) 
-} 
+
