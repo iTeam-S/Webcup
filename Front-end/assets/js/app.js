@@ -1,8 +1,10 @@
 $("#submits").click(function(e){
     e.preventDefault();
+    $("#submits").html('<img src="/assets/img/infinity.gif" style="width:10%">') 
     var response = grecaptcha.getResponse();
         if(response.length == 0) {
-            $("#g-recaptcha-error").text("Veuillez vérifier le captcha")
+            $("#g-recaptcha-error").text("Veuillez vérifier le captcha");
+            $("#submits").html('Se connecter')
         }
         else{
             $.ajax({
@@ -17,10 +19,12 @@ $("#submits").click(function(e){
                 success: function (result) {
                     console.log(result);
                     alert("nety");
+                    $("#submits").html('Se connecter')
                 },
                 error: function (xhr, status, err) {
                     console.error(xhr, status, err);
                     alert("tsy nety");
+                    $("#submits").html('Se connecter')
                 }
             });
     }
