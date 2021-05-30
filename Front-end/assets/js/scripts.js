@@ -125,8 +125,8 @@ $(function () {
         box_mobile_menu();
     });
     // Particles
-    if ($('#particles-js').length > 0) {
-        particlesJS('particles-js', {
+    if ($('#par').length > 0) {
+        particlesJS('par', {
             "particles": {
                 "number": {
                     "value": 100
