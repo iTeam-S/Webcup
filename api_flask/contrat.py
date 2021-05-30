@@ -42,7 +42,6 @@ tx_hash = Vote.constructor().transact()
 
 tx_receipt = web3.eth.waitForTransactionReceipt(tx_hash)
 default_account = tx_receipt.contractAddress
-print(abi)
 # default_account = '0x3F2EC437DdDcc487b42c64e0Ff7FD99DA02f46EA'
 vote = web3.eth.contract(
     address=default_account,

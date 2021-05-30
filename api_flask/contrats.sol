@@ -23,7 +23,7 @@ contract  Webcup{
     }
 
     User[] public users;
-    Transaction[] public transaction;
+    Transaction[] public transactions;
 
 
     function compareString(string memory s1, string memory s2) public pure returns(bool){
@@ -36,9 +36,9 @@ contract  Webcup{
     }
 
 
-    function get_user() public view returns (User memory){
+    function get_user(string memory id) public view returns (User memory){
         for (uint i; i<users.length; i++){
-            if ( compareString(users[i].email, email) ){
+            if ( compareString(users[i].id, id) ){
                 return users[i];
             }
         }
@@ -67,19 +67,21 @@ contract  Webcup{
     }
 
 
-    function save_transaction(string email, string type_, string icons, string date_creation){
-        User usr = get_user(email);
-        transaction.push(
-            usr, 
-            type_, 
-            icons, 
-            date_creation
+    function save_transaction(string memory id, string memory type_, string memory icons, string memory date_creation) public{
+        User memory usr = get_user(id);
+        transactions.push(
+            Transaction(
+                usr, 
+                type_, 
+                icons, 
+                date_creation
+            )
         );
     }
 
 
-    function all_transactions() {
-        return transaction;
+    function all_transactions() public returns (Transaction[] memory) {
+        return transactions;
     }
 }
 
