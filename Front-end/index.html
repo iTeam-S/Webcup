@@ -979,10 +979,9 @@
                       id: $.session.get('id'),
                   },
                   success: function (result) {
-                      console.log(result);
-                      if(result === true){
-                          $("#s_investir").modal('hide');
-                      }    	               
+                    alert("Votre transaction a été réussi") ;
+                    $("#s_investir").modal('hide');
+  	               
                   },
                   error: function (result, status, err) {
                       console.log(result);
