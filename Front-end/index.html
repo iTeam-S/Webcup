@@ -187,9 +187,9 @@
                 <i class="ri-brush-4-line"></i>
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Faire un don</a></h5>
+                <h5 class="card-title">Faire un don</h5>
                 <p class="card-text">Faire un don pour faire avancer l'entreprise</p>
-                <p class="invest">Faire un don</p>
+                <p class="invest" data-toggle="modal" data-target="#ModalDon" >Faire un don </p>
               </div>
             </div>
           </div>
@@ -200,10 +200,10 @@
                 <i class="ri-calendar-check-line"></i>
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Citoyen</a></h5>
+                <h5 class="card-title">Citoyen</h5>
                 <p class="card-text">Investissez pour recevoir jusqu'à 7% de taux d'intérêt par mois</p>
-                <p class="invest">S'investir</p>
-                <p class="estim"><i class="icofont-chart-bar-graph"></i> Faire une estimation</p>
+                <p class="invest" data-toggle="modal" data-target="#ModalInvest">S'investir</p>
+                <p class="estim" data-toggle="modal" data-target="#ModalEstim"><i class="icofont-chart-bar-graph"></i> Faire une estimation</p>
               </div>
             </div>
           </div>
@@ -214,10 +214,10 @@
                 <i class="ri-movie-2-line"></i>
               </div>
               <div class="card-body">
-                <h5 class="card-title"><a href="">Actionnaire</a></h5>
+                <h5 class="card-title">Actionneur</h5>
                 <p class="card-text">Gagnez une part des bénéfices de l'entreprise. </p>
-                <p class="invest">Devenir actionnaire</p>
-                <p class="estim"><i class="icofont-chart-bar-graph"></i> Faire une estimation</p>
+                <p class="invest" data-toggle="modal" data-target="#ModalAction">Devenir actionneur</p>
+                <p class="estim" data-toggle="modal" data-target="#ModalEstim"><i class="icofont-chart-bar-graph"></i> Faire une estimation</p>
               </div>
             </div>
           </div>
@@ -327,14 +327,14 @@
           <div class="col-md-6">
             <div class="icon-box">
               <i class="icofont-computer"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
+              <h4>Lorem Ipsum</h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non </p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="icofont-chart-bar-graph"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
+              <h4>Dolor Sitema</h4>
               <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
@@ -574,7 +574,7 @@
             <h4>Newsletter</h4>
             <p>Inscrivez-vous pour recevoir les derniers nouveautés</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="S'inscrire">
             </form>
 
           </div>
@@ -602,35 +602,34 @@
 
     <!-- Modal -->
       <!-- Modal  Login-->
-        <div class="modal fade" id="ModalLogin" data-dismiss="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="ModalLogin" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content rounded-0">
-              <div class="modal-body py-0" style="border-radius: 0px !important;">
-                <div class="d-flex main-content">
-                  <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/logbg.jpg');">
-                  </div>
-                  <div class="content-text p-4">
-                    <h3 class="logtext">S'identifier</h3>
-                    <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
-                    <form action="#">
-                      <div class="form-group">
-                        <label for="email">Adresse email</label>
-                        <input type="email" class="form-control" id="emails">
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" class="form-control" id="passs">
-                      </div>
-                      <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br>
-                        <div id="g-recaptcha-error" style="color:red;"></div></br>
-                      <div class="form-group">
-                        <input type="submit" value="Se connecter" class="btn btn-primary btn-block" id="submits">
-                      </div>
-                      <div class="form-group ">
-                        <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
-                      </div>
-                    </form>
-                  </div>
+      <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="ModalLogin" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
+              <div class="d-flex main-content">
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/logbg.jpg');">
+                </div>
+                <div class="content-text p-4">
+                  <h3 class="logtext">S'identifier</h3>
+                  <p>Entrez vos informations pour pouvoir accéder à votre compte</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="email" class="logtext">Adresse email</label>
+                      <input type="email" class="form-control" id="emails">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="logtext">Mot de passe</label>
+                      <input type="password" class="form-control" id="passs">
+                    </div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div></form></br> -->
+                      <div id="g-recaptcha-error" style="color:red;"></div></br>
+                    <div class="form-group">
+                      <input type="submit" value="Se connecter" class="btn btn-primary btn-block logbtn" id="submits">
+                    </div>
+                    <div class="form-group ">
+                      <p class="custom-note"><a href="#">Mot de passe oublié ?</a></p>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -690,6 +689,139 @@
         </div>
       </div><!-- End Modal  Login-->
 
+      <!-- Modal  Don-->
+      <div class="modal fade" id="ModalDon" tabindex="-1" role="dialog" aria-labelledby="ModalDon" aria-hidden="true" >
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 50%;">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
+              <div class="d-flex main-content">
+                <div class="content-text p-4">
+                  <h3 class="logtext">Crowdfunding</h3>
+                  <p>Faire un financement participatif</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
+                      <input type="number" class="form-control" id="email" placeholder="En icoin-$">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
+                    <div class="form-group">
+                      <input type="submit" value="Faire un don" class="btn btn-primary btn-block logbtn">
+                    </div>
+                  </form>
+                </div>
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/bitcoin.png');">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Modal  Don-->
+
+      <!-- Modal  Invest-->
+      <div class="modal fade" id="ModalInvest" tabindex="-1" role="dialog" aria-labelledby="ModalInvest" aria-hidden="true" >
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 50%;">
+          <div class="modal-content rounded-0">
+            <div class="modal-body py-0" style="border-radius: 0px !important;">
+              <div class="d-flex main-content">
+                <div class="content-text p-4">
+                  <h3 class="logtext">Faire un investissement</h3>
+                  <p>Faire un investissent</p>
+                  <form action="#">
+                    <div class="form-group">
+                      <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
+                      <input type="number" class="form-control" id="email" placeholder="En icoin-$">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                      <input type="password" class="form-control" id="password">
+                    </div>
+                    <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
+                    <div class="form-group">
+                      <input type="submit" value="S'investir" class="btn btn-primary btn-block logbtn">
+                    </div>
+                  </form>
+                </div>
+                <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/bitcoin.png');">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Modal  Invest-->
+
+
+    <!-- Modal Action-->
+    <div class="modal fade" id="ModalAction" tabindex="-1" role="dialog" aria-labelledby="ModalAction" aria-hidden="true" >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 50%;">
+        <div class="modal-content rounded-0">
+          <div class="modal-body py-0" style="border-radius: 0px !important;">
+            <div class="d-flex main-content">
+              <div class="content-text p-4">
+                <h3 class="logtext">Devenir un actionneur</h3>
+                <p>Devenir actionnaire et récolter des bénéfices</p>
+                <form action="#">
+                  <div class="form-group">
+                    <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
+                    <input type="number" class="form-control" id="email" placeholder="En icoin-$">
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="logtext" style="font-size: 13px;">Mot de passe</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                  <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
+                  <div class="form-group">
+                    <input type="submit" value="Faire une action" class="btn btn-primary btn-block logbtn">
+                  </div>
+                </form>
+              </div>
+              <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/bitcoin.png');">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Modal  Action-->
+
+    <!-- Modal Estim-->
+    <div class="modal fade" id="ModalEstim" tabindex="-1" role="dialog" aria-labelledby="ModalEstim" aria-hidden="true" >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 50%;">
+        <div class="modal-content rounded-0">
+          <div class="modal-body py-0" style="border-radius: 0px !important;">
+            <div class="d-flex main-content">
+              <div class="content-text p-4">
+                <h3 class="logtext">Faire une estimation</h3>
+                <p>Estimez vos bénéfices</p>
+                <form action="#">
+                  <div class="form-group">
+                    <label for="montant" class="logtext" style="font-size: 13px;">Montant</label>
+                    <input type="number" class="form-control" id="montant" placeholder="En icoin-$">
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="logtext" style="font-size: 13px;">Durée</label>
+                    <input type="number" class="form-control" id="duree" placeholder="En mois">
+                  </div>
+                  <!-- <div class="g-recaptcha" data-sitekey="6LcXCvwaAAAAAFrP5YZ1FuTj0t8aZYuD-ukObE2y"></div> -->
+                  <div class="form-group">
+                    <input type="submit" value="Résultats" class="btn btn-primary btn-block logbtn">
+                  </div>
+                </form>
+              </div>
+              <div class="bg-image promo-img mr-3" style="background-image: url('assets/img/bitcoin.png');">
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Modal  Estim-->
+
+
+  <!-- Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -717,6 +849,7 @@
   <script src="assets/js/chart.js"></script>
   <script src="assets/js/chartjs-plugin-streaming.min.js"></script>
   <script src="assets/js/moment.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
 
   <script>
         $( document ).ready(function() {
@@ -810,8 +943,5 @@
 				});
 
     </script>
-
-
 </body>
-
 </html>
